@@ -1,215 +1,217 @@
 <!DOCTYPE html>
-
 <html>
- 
-  <head>
-   
-    <head>
-    <img src = "WebBanner2023.png" alt="Banner" width="1200" height="300">
-     <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
-     <h2>Student URN:6928246</h2>
-     <hr>
-     <h2 style="font-family:calibiri;"><b>Confrence paper: Computer Modelling with Crime</b></h2>
-     <hr>
-    <head>
-
-     <!style for tables>
-      <style>
-          table {
-           font-family: arial, sans-serif;
-           border-collapse: collapse;
-           width: 30%;
-   
-          }
-   
-          td, th {
-           border: 1px solid #dddddd;
-           text-align: left;
-           padding: 8px;
-          }
-   
-          tr:nth-child(even) {
-           background-color: #dddddd;
-          }
-
-       
-      </style>
-     <style>
-p.ex1 {
-    margin-left: 250px;
-}
-      
-     </style>
-     
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-     <style>
-     .mySlides {display: none;}
-     </style>
-<body style="background-color:#FFFFFF;margin-left:50px;"> 
-
-
-  </head>
-  <!table of contents>
-     <table>
-
-      <tr>
-       <th><h3>Table of Contents</h3></th>
-      </tr>
-      <tr>
-       <td><a href="#Abstract">Abstract</td>
-      </tr>
-      <tr>
-       <td><a href="#Introduction">Introduction</td>
-      </tr>
-      <tr>
-       <td><a href="#Analysis and discussion">Analysis and Discussion</td>
-      </tr>
-
-      <tr>
-       <td><a href="#References">References</td>
-      </tr>
-     </table>
-
-     <div id=”chart_div”></div>
-<hr>
-     <h3 id ="Abstract">Abstract</h3>
-      <p class ="ex1>
-      <pre>
-       This article will dive deeper into the controversy regarding predictive policing and weigh up the advantages of 
-       predictive policing with the negatives. Predictive policing may have numerous clear advantages however there are 
-       concerns and controversy that makes the community question the need for predictive policing and these will all be 
-       visited within this article. This topic is a crucial one to cover as it will encourage open-mindedness showing 
-       both sides of the controversy and hopefully lead to improvements regarding the current Predictive Policing system. 
-       There are gaps in research about predictive modelling when it comes to clear and sufficient evidence base to prove 
-       the benefits or drawbacks.
-      </pre>
-     </
-     </hr>
-
-     <h3 id ="Introduction">Introduction</h3>
-      <p class ="ex1>
-      <pre>
-       “Predictive policing models rely on computer systems' ability to analyse large sets of data, as well as historical 
-       crime data, to help make more effective choices and decisions about things like the location and quantity of police 
-       deployment or the identification of individuals who are likely to be victims or perpetrators of crime. There are two 
-       applications of predictive modelling with the key difference being the input information they use to produce the 
-       predictions. The first application takes in the use of arrest data to help predict likely physical crime hotspots. 
-       The second application uses social media data to identify individuals and how likely it is that they will commit crime.”
- 
-      </pre>
-     </
-     </hr>
-‘h3 id=”Analysis and discussion”>Analysis and discussion</h3>’
-
-       Table 1: Data on cost and lifespan of bridge repairs
-       <table>
-       <tr>
-         <th>£Cost of Repairs</th>
-         <th>Lifespan of Repairs</th>
-       </tr>
-       <tr>
-         <td>0.7 m</td>
-         <td>2</td>
-       </tr>
-       <tr>
-         <td>3.3 m</td>
-         <td>4</td>
-       </tr>
-       <tr>
-         <td>2.6 m</td>
-         <td>5</td>
-       </tr>
-       <tr>
-         <td>17.4 m</td>
-         <td>7</td>
-       </tr>
-       <tr>
-         <td>8.8 m</td>
-         <td>9</td>
-       </tr>
-       </table>
-         
-
-
-
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- Last commit time display -->
-<div id="last-updated">Loading last update time...</div>
-<!-- Verify Button -->
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
-</button>
-<script>
-    async function getLastUpdatedTime() {
-        const username = 'nr0025';
-        const repo = 'FY0025';
-       
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+<head>
+    <title>ENG0018 Computer Laboratory 2025/26 - Conference Paper</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 30%;
         }
-    }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
-</script>
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    
+    <style>
+        .ex1 {
+            /* Changed to margin-left: 50px for better alignment with the body margin, 
+               or you can set it back to 250px if you need a deep indent. */
+            margin-left: 50px; 
+            /* Added margin-right for symmetry and readability */
+            margin-right: 50px;
+        }
+        .mySlides {display: none;}
+    </style>
+    
+</head>
 
+<body style="background-color:#FFFFFF; margin-left:50px;">
+    
+    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
+    <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
+    <h2>Student URN:6928246</h2>
+    <hr>
+    <h2 style="font-family:calibri;"><b>Conference paper: Computer Modelling with Crime</b></h2> 
+    <hr>
+    
+    <h3>Table of Contents</h3>
+    <table>
+        <tr>
+            <th>Contents</th> </tr>
+        <tr>
+            <td><a href="#Abstract">Abstract</a></td> </tr>
+        <tr>
+            <td><a href="#Introduction">Introduction</a></td> </tr>
+        <tr>
+            <td><a href="#Analysis-and-discussion">Analysis and Discussion</a></td> </tr>
+        <tr>
+            <td><a href="#References">References</a></td> </tr>
+    </table>
+    
+    <div id="chart_div"></div>
+    <hr>
 
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
-<hr>
-<script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
+    <h3 id="Abstract">Abstract</h3>
+    <p class="ex1" id="Abstract_InText"> 
+        This article will dive deeper into the controversy regarding predictive policing and weigh up the advantages of 
+        predictive policing with the negatives. Predictive policing may have numerous clear advantages however there are 
+        concerns and controversy that makes the community question the need for predictive policing and these will all be 
+        visited within this article. This topic is a crucial one to cover as it will encourage open-mindedness showing 
+        both sides of the controversy and hopefully lead to improvements regarding the current Predictive Policing system. 
+        There are gaps in research about predictive modelling when it comes to clear and sufficient evidence base to prove 
+        the benefits or drawbacks.
+    </p> <hr>
+
+    <h3 id="Introduction">Introduction</h3>
+    <p class="ex1" id="Introduction_InText">
+        “Predictive policing models rely on computer systems' ability to analyse large sets of data, as well as historical 
+        crime data, to help make more effective choices and decisions about things like the location and quantity of police 
+        deployment or the identification of individuals who are likely to be victims or perpetrators of crime. There are two 
+        applications of predictive modelling with the key difference being the input information they use to produce the 
+        predictions. The first application takes in the use of arrest data to help predict likely physical crime hotspots. 
+        The second application uses social media data to identify individuals and how likely it is that they will commit crime.”
+    </p> <hr>
+
+    <h3 id="Analysis-and-discussion">Analysis and discussion</h3> 
+    <p class="ex1" id="Analysis_InText">
+        [Content for Analysis and discussion goes here. The word count script will now count this content.]
+    </p>
+
+    <p>Table 1: Data on cost and lifespan of bridge repairs</p> <table>
+        <tr>
+            <th>£Cost of Repairs</th>
+            <th>Lifespan of Repairs (Years)</th> </tr>
+        <tr>
+            <td>0.7 m</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3.3 m</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>2.6 m</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>17.4 m</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8.8 m</td>
+            <td>9</td>
+        </tr>
+    </table>
+    
+    <hr> <h3 id="References">References</h3>
+    <hr>
+    
+    <div id="last-updated">Loading last update time...</div>
+    <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+        Verify Last Modified Time
+    </button>
+    <script>
+        async function getLastUpdatedTime() {
+            const username = 'nr0025';
+            const repo = 'FY0025';
+            
+            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json',
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+                }
+                const commits = await response.json();
+                if (commits && commits.length > 0) {
+                    const lastCommitDate = new Date(commits[0].commit.committer.date);
+                    
+                    // Displaying the time on load
+                    document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+                } else {
+                    document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+                }
+            } catch (error) {
+                console.error('Error fetching the last updated time:', error);
+                document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+            }
+        }
+        // Function to verify the last update time by re-fetching it from the API
+        async function verifyLastUpdatedTime() {
+            document.getElementById('last-updated').innerText = 'Verifying...';
+            await getLastUpdatedTime();
+            alert("Last modified time has been successfully verified from GitHub API.");
+        }
+        // Initial load to display the time on page load
+        getLastUpdatedTime(); // Changed to run immediately, not just on window.onload
+    </script>
+    
+    
+    <p id="totalWordCount"></p>
+    <hr>
+    <script>
+        // Function to calculate and display word count for a specified section
+        function getWordCount(sectionId) {
+            // Get the text content from the specified section
+            const element = document.getElementById(sectionId);
+            if (!element) {
+                console.warn(`Element with ID "${sectionId}" not found for word count.`);
+                return 0; // Return 0 if the element doesn't exist
+            }
+            const text = element.textContent;
+            // Split text into words based on spaces and filter out any empty strings
+            // \S+ means one or more non-whitespace characters
+            const wordArray = text.trim().match(/\S+/g); 
+            // Count the words, safely handling null if no matches are found
+            const wordCount = wordArray ? wordArray.length : 0;
+            // You can optionally display individual section counts here if needed
+            // console.log(`${sectionId} Word Count: ${wordCount}`);
+            return wordCount;
+        }
+        
+        // Function to calculate and display total word count from selected sections
+        function displayTotalWordCount() {
+            // Calculate word count for each section using the new IDs
+            const AbstractCount = getWordCount("Abstract_InText"); // Added Abstract for completeness
+            const IntroductionCount = getWordCount("Introduction_InText");
+            const AnalysisCount = getWordCount("Analysis_InText");
+            
+            // Calculate the sum of all selected sections
+            const totalWordCount = AbstractCount + IntroductionCount + AnalysisCount;
+            
+            // Display the total word count
+            document.getElementById("totalWordCount").innerText = `Total word count (Abstract, Introduction, Analysis): ${totalWordCount}`;
+        }
+        
+        // Run the function for specific sections and display total count when the page loads
+        // We use DOMContentLoaded to ensure all elements are present before counting
+        document.addEventListener('DOMContentLoaded', displayTotalWordCount);
+        
+        // If you were using window.onload for both GitHub and WordCount, you'd need a single wrapper function:
+        /*
+        window.onload = function() {
+            getLastUpdatedTime(); 
+            displayTotalWordCount();
+        };
+        */
+        
+        // Since getLastUpdatedTime() is now called without window.onload, we only need to ensure 
+        // displayTotalWordCount runs after the DOM is ready.
+    </script>
+
+</body>
+</html>
