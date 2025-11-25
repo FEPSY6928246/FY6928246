@@ -152,10 +152,7 @@
     <hr>
     
     <h3 id="References">References</h3>
-    <div id="last-updated">Loading last update time...</div>
-    <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-        Verify Last Modified Time
-    </button>
+
     <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
@@ -167,7 +164,7 @@
 </button>
 <script>
     async function getLastUpdatedTime() {
-        const username = '6928246';
+        const username = 'FEPSY6928246';
         const repo = 'FY6928246';
        
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
@@ -229,8 +226,10 @@
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
+    const ADVANTAGESCount = displayWordCount("ADVANTAGES_InText")
+    const DISADVANTAGESCount = displayWordCount("DISADVANTAGES_InText")
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + ADVANATAGESCount + DISADVANTAGESCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
