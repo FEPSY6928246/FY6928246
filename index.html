@@ -8,13 +8,72 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <style>
+        /* --- General Text and Layout Styles --- */
+        body {
+            /* Use a slightly off-white background for less eye strain */
+            background-color: #f8f9fa !important;
+            /* Set a maximum width for the content to improve readability on large screens */
+            max-width: 1200px;
+            margin: 0 auto; /* Center the entire body content */
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Subtle shadow around content */
+            font-family: 'Times New Roman', Times, serif; /* Professional font */
+        }
+
+        /* --- Headings --- */
+        h1, h2, h3, h4, h5 {
+            font-family: Calibri, sans-serif;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        h1 {
+            border-bottom: 3px solid #0056b3; /* Strong blue line under main title */
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            font-size: 2.2em;
+        }
+
+        h3 {
+            color: #0056b3; /* Blue for section headings */
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        h4 {
+            color: #495057; /* Darker grey for subheadings */
+            text-transform: uppercase;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+        /* --- Horizontal Rules (Separators) --- */
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+            margin: 20px 0;
+        }
+
+        /* --- Tables --- */
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
-            width: 30%;
-            /* 💡 Fix 1: Center the table */
+            width: 300px; /* Set fixed width to prevent content overflow on center */
             margin-left: auto;
             margin-right: auto;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th {
+            background-color: #0056b3; /* Blue header */
+            color: white;
+            text-align: center !important;
+            padding: 12px 8px;
+            border: none !important;
         }
         td, th {
             border: 1px solid #dddddd;
@@ -22,20 +81,55 @@
             padding: 8px;
         }
         tr:nth-child(even) {
-            background-color: #dddddd;
+            background-color: #e9ecef; /* Lighter grey for zebra striping */
+        }
+        tr:hover {
+            background-color: #cfe2ff; /* Light blue on hover for interactivity */
         }
 
-        /* 💡 Fix 2 & 3: Corrected and combined styles */
-        h3, h4, #chart_div, #last-updated, #totalWordCount, button {
-            text-align: center;
+        /* --- Main Text Indentation --- */
+        .ex1 {
+            /* Reduced margin for better use of screen space and better balance */
+            margin: 0 50px 15px 50px;
+            text-align: justify; /* Justify text for a professional look */
+            line-height: 1.6; /* Increased line spacing for readability */
         }
+
+        /* --- Images and Buttons --- */
+        .banner-container {
+            text-align: center;
+            margin-bottom: 20px;
+            overflow: hidden; /* Ensure banner doesn't break layout */
+        }
+
+        button {
+            background-color: #28a745; /* Green button for verification */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+
+        .word-count-display, #totalWordCount, #last-updated {
+            text-align: center;
+            font-style: italic;
+            color: #6c757d;
+            margin: 5px 0 10px 0;
+        }
+
     </style>
 
     <style>
         /* This class is used for indenting the main text blocks */
         .ex1 {
-            /* Kept your original 250px margin, consider making it a percentage for responsiveness */
+            /* Kept your original 250px margin but only for the left side when used with margin: 0 50px... */
             margin-left: 250px;
+            margin-right: 50px;
         }
         .mySlides {display: none;}
     </style>
@@ -44,13 +138,13 @@
 
 <body style="background-color:#FFFFFF;">
 
-    <div style="text-align: center;">
-        <img src="WebBanner2023.png" alt="Banner" width="1200" height="300" style="max-width: 100%; height: auto;">
+    <div class="banner-container">
+        <img src="WebBanner2023.png" alt="Banner" width="1200" height="300" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
     </div>
-    <h1 style="text-align: center;"><b>ENG0018 Computer Laboratory 2025/26</b></h1>
-    <h2 style="text-align: center;">Student URN:6928246</h2>
+    <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
+    <h2>Student URN:6928246</h2>
     <hr>
-    <h2 style="font-family:calibri; text-align: center;"><b>Computer Modelling with Crime</b></h2>
+    <h2 style="font-family:calibri;"><b>Computer Modelling with Crime</b></h2>
     <hr>
 
     <h3>Table of Contents</h3>
@@ -85,6 +179,7 @@
         There are gaps in research about predictive modelling when it comes to clear and sufficient evidence base to prove
         the benefits or drawbacks.
     </p>
+    <p id="AbstractWordCount" class="word-count-display"></p>
     <hr>
 
     <h3 id="Introduction">Introduction</h3>
@@ -96,6 +191,7 @@
         predictions. The first application takes in the use of arrest data to help predict likely physical crime hotspots.
         The second application uses social media data to identify individuals and how likely it is that they will commit crime.”
     </p>
+    <p id="IntroductionWordCount" class="word-count-display"></p>
     <hr>
 
     <h3 id="Analysis-and-discussion">Analysis and discussion</h3>
@@ -108,6 +204,7 @@
         of major crimes such as vehicle theft and burglary. This enabled them to properly allocate resources and attention to those areas
         which as a result led to a drop in crime overall in comparison to the previous year. [0]
     </p>
+    <p id="ReduceCrimeWordCount" class="word-count-display"></p>
 
     <h5> 2. Improved Decision Making:</h5>
     <p class="ex1" id="ADVANTAGES_DecisionMaking_InText">
@@ -116,6 +213,7 @@
         that may be based on bias rather than evidence. These predictive models are used to boost the operational efficiency of organisations
         and police departments. The more efficient police departments are, the more the public benefits as order is better maintained.
     </p>
+    <p id="DecisionMakingWordCount" class="word-count-display"></p>
     <hr>
 
     <h4 id="DISADVANTAGES">DISADVANTAGES</h4>
@@ -126,6 +224,7 @@
         susceptible to data leaks as data security requires training and personnel which could be quite costly. This allows for the
         possibility of private personal data being leaked which
     </p>
+    <p id="PrivacyConcernsWordCount" class="word-count-display"></p>
 
     <h5> 2. Discrimination and Lack of transparency: </h5>
     <p class="ex1" id="DISADVANTAGES_Discrimination_InText">
@@ -135,6 +234,7 @@
         allow the public to understand how decisions on policing are made. This in turn erodes the trust of the specific demographics and
         the public with Police departments.
     </p>
+    <p id="DiscriminationWordCount" class="word-count-display"></p>
 
     <p style="text-align: center;">Table 1: Data on cost and lifespan of bridge repairs</p>
     <table>
@@ -168,7 +268,7 @@
     <h3 id="References">References</h3>
 
     <div id="last-updated">Loading last update time...</div>
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 10px 20px;">
     Verify Last Modified Time
 </button>
 <script>
@@ -207,8 +307,6 @@
         await getLastUpdatedTime();
         alert("Last modified time has been successfully verified from GitHub API.");
     }
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime; // Changed from displayTotalWordCount, as word count is now run separately
 </script>
 
 
@@ -216,40 +314,45 @@
 <hr>
 <script>
     // Function to calculate and display word count for a specified section
-    function displayWordCount(sectionId) {
+    function displayWordCount(sectionId, outputId) {
         // Get the text content from the specified section
         const element = document.getElementById(sectionId);
         if (!element) return 0; // Check if element exists
         const text = element.textContent;
         // Split text into words based on spaces and filter out any empty strings
-        // Regular expression \s+ matches one or more whitespace characters
         const wordArray = text.trim().split(/\s+/).filter(word => word.length > 0);
         // Count the words
         const wordCount = wordArray.length;
+
+        // Display the individual word count if an outputId is provided
+        const outputElement = document.getElementById(outputId);
+        if (outputElement) {
+            outputElement.innerText = `Word count for this section: ${wordCount}`;
+        }
+
         // Return the word count for summing purposes
         return wordCount;
     }
 
     // Function to calculate and display total word count from selected sections
     function displayTotalWordCount() {
-        // 💡 Fix 5: Corrected IDs for word count
-        const AbstractCount = displayWordCount("Abstract_InText");
-        const IntroductionCount = displayWordCount("Introduction_InText");
-        const ADVANTAGES_ReduceCrime_Count = displayWordCount("ADVANTAGES_ReduceCrime_InText");
-        const ADVANTAGES_DecisionMaking_Count = displayWordCount("ADVANTAGES_DecisionMaking_InText");
-        const DISADVANTAGES_Privacy_Count = displayWordCount("DISADVANTAGES_Privacy_InText");
-        const DISADVANTAGES_Discrimination_Count = displayWordCount("DISADVANTAGES_Discrimination_InText");
+        // Corrected IDs for individual word counts (Section ID, Output ID)
+        const AbstractCount = displayWordCount("Abstract_InText", "AbstractWordCount");
+        const IntroductionCount = displayWordCount("Introduction_InText", "IntroductionWordCount");
+        const ADVANTAGES_ReduceCrime_Count = displayWordCount("ADVANTAGES_ReduceCrime_InText", "ReduceCrimeWordCount");
+        const ADVANTAGES_DecisionMaking_Count = displayWordCount("ADVANTAGES_DecisionMaking_InText", "DecisionMakingWordCount");
+        const DISADVANTAGES_Privacy_Count = displayWordCount("DISADVANTAGES_Privacy_InText", "PrivacyConcernsWordCount");
+        const DISADVANTAGES_Discrimination_Count = displayWordCount("DISADVANTAGES_Discrimination_InText", "DiscriminationWordCount");
 
 
         // Calculate the sum of all selected sections
         const totalWordCount = AbstractCount + IntroductionCount + ADVANTAGES_ReduceCrime_Count + ADVANTAGES_DecisionMaking_Count + DISADVANTAGES_Privacy_Count + DISADVANTAGES_Discrimination_Count;
 
         // Display the total word count
-        document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+        document.getElementById("totalWordCount").innerText = `Total word count for content sections: ${totalWordCount}`;
     }
 
-    // Run the function for specific sections and display total count when the page loads
-    // Note: This ensures both the GitHub time and word count run on load.
+    // Run both functions when the page finishes loading
     window.addEventListener('load', () => {
         getLastUpdatedTime();
         displayTotalWordCount();
