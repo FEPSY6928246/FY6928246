@@ -6,145 +6,187 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
 
     <style>
-        /* --- General Text and Layout Styles --- */
+        /* --- 1. Global Reset and Layout --- */
+        :root {
+            --primary-color: #1a5789; /* Deep Blue for professionalism */
+            --secondary-color: #e0e7f0; /* Light Gray-Blue for accents */
+            --text-color: #333;
+            --light-text-color: #666;
+            --border-color: #ddd;
+        }
+
         body {
-            /* Use a slightly off-white background for less eye strain */
-            background-color: #f8f9fa !important;
-            /* Set a maximum width for the content to improve readability on large screens */
-            max-width: 1200px;
-            margin: 0 auto; /* Center the entire body content */
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05); /* Subtle shadow around content */
-            font-family: 'Times New Roman', Times, serif; /* Professional font */
+            background-color: #f4f6f8 !important; /* Very light subtle background */
+            max-width: 1000px; /* Optimal width for two-column/academic feel */
+            margin: 0 auto;
+            padding: 40px 30px; /* More padding */
+            font-family: 'Merriweather', serif; /* Serif font for academic body text */
+            color: var(--text-color);
+            line-height: 1.65;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Stronger overall box shadow */
+            background-color: white !important; /* Ensure the content area is pure white */
         }
 
-        /* --- Headings --- */
+        /* --- 2. Typography and Headings --- */
         h1, h2, h3, h4, h5 {
-            font-family: Calibri, sans-serif;
-            font-weight: 600;
-            color: #333;
+            font-family: 'Lato', sans-serif; /* Clean sans-serif for headings */
+            color: var(--primary-color);
             text-align: center;
-            padding-top: 10px;
-        }
-
-        h1 {
-            border-bottom: 3px solid #0056b3; /* Strong blue line under main title */
-            padding-bottom: 10px;
-            margin-bottom: 0;
-            font-size: 2.2em;
-        }
-
-        h3 {
-            color: #0056b3; /* Blue for section headings */
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+            font-weight: 700;
             margin-top: 30px;
         }
 
-        h4 {
-            color: #495057; /* Darker grey for subheadings */
+        h1 {
+            border-bottom: 5px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 5px;
+            font-size: 2.5em;
             text-transform: uppercase;
-            font-size: 1.1em;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            color: #222; /* Darker H1 */
         }
 
-        /* --- Horizontal Rules (Separators) --- */
+        h2 {
+            font-size: 1.5em;
+            color: var(--light-text-color);
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            text-align: left; /* Align section headings left */
+            margin-left: 50px; /* Align with indented text */
+        }
+        
+        h4 {
+            font-size: 1.2em;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            margin-left: 50px;
+            margin-top: 25px;
+        }
+        
+        h5 {
+            font-family: 'Merriweather', serif;
+            font-size: 1em;
+            font-weight: bold;
+            color: var(--text-color);
+            text-align: left;
+            margin-left: 50px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        /* --- 3. Content Blocks and Indentation --- */
+        .ex1 {
+            /* Kept your original 250px margin for left indent */
+            margin-left: 250px; 
+            margin-right: 50px;
+            text-align: justify;
+            padding-bottom: 10px;
+            hyphens: auto; /* Helps with justified text gaps */
+        }
+
+        .banner-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .banner-container img {
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* --- 4. Tables (Table of Contents & Data Tables) --- */
+        table {
+            border-collapse: collapse;
+            width: 350px; /* Slightly wider TOC table */
+            margin: 20px auto;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center !important;
+            padding: 12px 10px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+        }
+        td {
+            padding: 10px;
+        }
+        tr:nth-child(even) {
+            background-color: var(--secondary-color); /* Light blue-gray zebra striping */
+        }
+        tr:hover {
+            background-color: #c7d8f0; /* Darker hover effect */
+        }
+        
+        /* Table of Contents links */
+        table a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        table a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- 5. Footer and Utility Elements --- */
         hr {
             border: 0;
             height: 1px;
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-            margin: 20px 0;
-        }
-
-        /* --- Tables --- */
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 300px; /* Set fixed width to prevent content overflow on center */
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        th {
-            background-color: #0056b3; /* Blue header */
-            color: white;
-            text-align: center !important;
-            padding: 12px 8px;
-            border: none !important;
-        }
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        tr:nth-child(even) {
-            background-color: #e9ecef; /* Lighter grey for zebra striping */
-        }
-        tr:hover {
-            background-color: #cfe2ff; /* Light blue on hover for interactivity */
-        }
-
-        /* --- Main Text Indentation --- */
-        .ex1 {
-            /* Reduced margin for better use of screen space and better balance */
-            margin: 0 50px 15px 50px;
-            text-align: justify; /* Justify text for a professional look */
-            line-height: 1.6; /* Increased line spacing for readability */
-        }
-
-        /* --- Images and Buttons --- */
-        .banner-container {
-            text-align: center;
-            margin-bottom: 20px;
-            overflow: hidden; /* Ensure banner doesn't break layout */
-        }
-
-        button {
-            background-color: #28a745; /* Green button for verification */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #218838;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+            margin: 30px 0;
         }
 
         .word-count-display, #totalWordCount, #last-updated {
             text-align: center;
             font-style: italic;
-            color: #6c757d;
+            color: var(--light-text-color);
             margin: 5px 0 10px 0;
+            font-size: 0.9em;
         }
 
-    </style>
-
-    <style>
-        /* This class is used for indenting the main text blocks */
-        .ex1 {
-            /* Kept your original 250px margin but only for the left side when used with margin: 0 50px... */
-            margin-left: 250px;
-            margin-right: 50px;
+        button {
+            background-color: #28a745; 
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.1s;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
-        .mySlides {display: none;}
+        button:hover {
+            background-color: #218838;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+
     </style>
 
 </head>
 
-<body style="background-color:#FFFFFF;">
+<body style="background-color:white;">
 
     <div class="banner-container">
-        <img src="WebBanner2023.png" alt="Banner" width="1200" height="300" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <img src="WebBanner2023.png" alt="Conference Paper Banner" width="1200" height="300" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
     </div>
     <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
     <h2>Student URN:6928246</h2>
     <hr>
-    <h2 style="font-family:calibri;"><b>Computer Modelling with Crime</b></h2>
+    <h2><b>Computer Modelling with Crime</b></h2>
     <hr>
 
     <h3>Table of Contents</h3>
@@ -268,7 +310,7 @@
     <h3 id="References">References</h3>
 
     <div id="last-updated">Loading last update time...</div>
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 10px 20px;">
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto 30px auto;">
     Verify Last Modified Time
 </button>
 <script>
