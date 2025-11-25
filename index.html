@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+
     <title>ENG0018 Computer Laboratory 2025/26 - Conference Paper</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
+
     <style>
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
             width: 30%;
+            /* 💡 Fix 1: Center the table */
+            margin-left: auto;
+            margin-right: auto;
         }
         td, th {
             border: 1px solid #dddddd;
@@ -21,30 +24,35 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        /* 💡 Fix 2 & 3: Corrected and combined styles */
+        h3, h4, #chart_div, #last-updated, #totalWordCount, button {
+            text-align: center;
+        }
     </style>
-    
+
     <style>
         /* This class is used for indenting the main text blocks */
         .ex1 {
-            margin-left: 250px; /* Kept your original 250px margin */
+            /* Kept your original 250px margin, consider making it a percentage for responsiveness */
+            margin-left: 250px;
         }
         .mySlides {display: none;}
     </style>
-    
+
 </head>
 
-<body style="background-color:#FFFFFF; margin-left:50px;">
-    
-    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
-    <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
-    <h2>Student URN:6928246</h2>
+<body style="background-color:#FFFFFF;">
+
+    <div style="text-align: center;">
+        <img src="WebBanner2023.png" alt="Banner" width="1200" height="300" style="max-width: 100%; height: auto;">
+    </div>
+    <h1 style="text-align: center;"><b>ENG0018 Computer Laboratory 2025/26</b></h1>
+    <h2 style="text-align: center;">Student URN:6928246</h2>
     <hr>
-    <h2 style="font-family:calibri;"><b>Computer Modelling with Crime</b></h2> 
+    <h2 style="font-family:calibri; text-align: center;"><b>Computer Modelling with Crime</b></h2>
     <hr>
-    <style>
-        h3 {textalign: center}
-        chart_div {textalign: center}
-    </style>
+
     <h3>Table of Contents</h3>
     <table>
         <tr>
@@ -63,82 +71,72 @@
             <td><a href="#References">References</a></td>
         </tr>
     </table>
-    
+
     <div id="chart_div"></div>
     <hr>
-    <style>
-        h3{textalign:center}
-    </style>
 
     <h3 id="Abstract">Abstract</h3>
-    <p class="ex1" id="Abstract_InText"> 
-        This article will dive deeper into the controversy regarding predictive policing and weigh up the advantages of 
-        predictive policing with the negatives. Predictive policing may have numerous clear advantages however there are 
-        concerns and controversy that makes the community question the need for predictive policing and these will all be 
-        visited within this article. This topic is a crucial one to cover as it will encourage open-mindedness showing 
-        both sides of the controversy and hopefully lead to improvements regarding the current Predictive Policing system. 
-        There are gaps in research about predictive modelling when it comes to clear and sufficient evidence base to prove 
+    <p class="ex1" id="Abstract_InText">
+        This article will dive deeper into the controversy regarding predictive policing and weigh up the advantages of
+        predictive policing with the negatives. Predictive policing may have numerous clear advantages however there are
+        concerns and controversy that makes the community question the need for predictive policing and these will all be
+        visited within this article. This topic is a crucial one to cover as it will encourage open-mindedness showing
+        both sides of the controversy and hopefully lead to improvements regarding the current Predictive Policing system.
+        There are gaps in research about predictive modelling when it comes to clear and sufficient evidence base to prove
         the benefits or drawbacks.
     </p>
     <hr>
 
     <h3 id="Introduction">Introduction</h3>
     <p class="ex1" id="Introduction_InText">
-        “Predictive policing models rely on computer systems' ability to analyse large sets of data, as well as historical 
-        crime data, to help make more effective choices and decisions about things like the location and quantity of police 
-        deployment or the identification of individuals who are likely to be victims or perpetrators of crime. There are two 
-        applications of predictive modelling with the key difference being the input information they use to produce the 
-        predictions. The first application takes in the use of arrest data to help predict likely physical crime hotspots. 
+        “Predictive policing models rely on computer systems' ability to analyse large sets of data, as well as historical
+        crime data, to help make more effective choices and decisions about things like the location and quantity of police
+        deployment or the identification of individuals who are likely to be victims or perpetrators of crime. There are two
+        applications of predictive modelling with the key difference being the input information they use to produce the
+        predictions. The first application takes in the use of arrest data to help predict likely physical crime hotspots.
         The second application uses social media data to identify individuals and how likely it is that they will commit crime.”
     </p>
     <hr>
 
-    <h3 id="Analysis-and-discussion">Analysis and discussion</h3> 
-    <style>
-        h4 { textalign: center}
-    </style>
+    <h3 id="Analysis-and-discussion">Analysis and discussion</h3>
     <h4 id="ADVANTAGES">ADVANTAGES</h4>
     <h5> 1. Reduce Crime:</h5>
-    <p class="ex1" id="ADVANATAGES_InText">
-            Predictive Policing has been said to be suitable choice of action for the reduction of crime with a few examples being able to 
-        back the claim. For instance, the police department in Dubai were able to see a reduction to major crimes by 25% within months of 
-        when they began using crime prediction. Departments were able to label and identify time frames and areas with higher probabilities 
-        of major crimes such as vehicle theft and burglary. This enabled them to properly allocate resources and attention to those areas 
+    <p class="ex1" id="ADVANTAGES_ReduceCrime_InText">
+        Predictive Policing has been said to be suitable choice of action for the reduction of crime with a few examples being able to
+        back the claim. For instance, the police department in Dubai were able to see a reduction to major crimes by 25% within months of
+        when they began using crime prediction. Departments were able to label and identify time frames and areas with higher probabilities
+        of major crimes such as vehicle theft and burglary. This enabled them to properly allocate resources and attention to those areas
         which as a result led to a drop in crime overall in comparison to the previous year. [0]
     </p>
 
     <h5> 2. Improved Decision Making:</h5>
-    <p class="ex1" id="ADVANATAGES_InText">
-            The use of predictive models refines and enhances decision making allowing all levels of an organisation to get insights 
-        relevant to them by their historical data. The availability of the information in abundance discourages police from making decisions 
+    <p class="ex1" id="ADVANTAGES_DecisionMaking_InText">
+        The use of predictive models refines and enhances decision making allowing all levels of an organisation to get insights
+        relevant to them by their historical data. The availability of the information in abundance discourages police from making decisions
         that may be based on bias rather than evidence. These predictive models are used to boost the operational efficiency of organisations
         and police departments. The more efficient police departments are, the more the public benefits as order is better maintained.
     </p>
     <hr>
 
-    <style>
-        h4 { textalign: center}
-    </style>
-
     <h4 id="DISADVANTAGES">DISADVANTAGES</h4>
     <h5> 1. Privacy concerns:</h5>
-    <p class="ex1" id="DISADVANATAGES_InText">
-            With the consideration of the second application of predictive policing mentioned earlier, we can understand that it poses 
-        serious privacy concerns as it uses data about individuals gathered from the internet. Data stored by the police department is 
-        susceptible to data leaks as data security requires training and personnel which could be quite costly. This allows for the 
+    <p class="ex1" id="DISADVANTAGES_Privacy_InText">
+        With the consideration of the second application of predictive policing mentioned earlier, we can understand that it poses
+        serious privacy concerns as it uses data about individuals gathered from the internet. Data stored by the police department is
+        susceptible to data leaks as data security requires training and personnel which could be quite costly. This allows for the
         possibility of private personal data being leaked which
     </p>
 
     <h5> 2. Discrimination and Lack of transparency: </h5>
-    <p class="ex1" id="DISADVANATAGES_InText">
-            Another key concern regarding predictive modelling is that AI models can develop biases from the data that they will be taking in. 
-        This in turn can lead to policing practices that are discriminatory. Additionally predictive policing algorithms do not allow for 
-        public input on decisions regarding policing and resource allocations are made. The nature of predictive policy additionally doesn’t 
-        allow the public to understand how decisions on policing are made. This in turn erodes the trust of the specific demographics and 
+    <p class="ex1" id="DISADVANTAGES_Discrimination_InText">
+        Another key concern regarding predictive modelling is that AI models can develop biases from the data that they will be taking in.
+        This in turn can lead to policing practices that are discriminatory. Additionally predictive policing algorithms do not allow for
+        public input on decisions regarding policing and resource allocations are made. The nature of predictive policy additionally doesn’t
+        allow the public to understand how decisions on policing are made. This in turn erodes the trust of the specific demographics and
         the public with Police departments.
     </p>
 
-    <p>Table 1: Data on cost and lifespan of bridge repairs</p> 
+    <p style="text-align: center;">Table 1: Data on cost and lifespan of bridge repairs</p>
     <table>
         <tr>
             <th>£Cost of Repairs</th>
@@ -166,15 +164,10 @@
         </tr>
     </table>
     <hr>
-    
+
     <h3 id="References">References</h3>
 
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- Last commit time display -->
-<div id="last-updated">Loading last update time...</div>
-<!-- Verify Button -->
+    <div id="last-updated">Loading last update time...</div>
 <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
     Verify Last Modified Time
 </button>
@@ -182,7 +175,7 @@
     async function getLastUpdatedTime() {
         const username = 'FEPSY6928246';
         const repo = 'FY6928246';
-       
+
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
             const response = await fetch(url, {
@@ -197,7 +190,7 @@
             const commits = await response.json();
             if (commits && commits.length > 0) {
                 const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
+
                 // Displaying the time on load
                 document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
             } else {
@@ -215,42 +208,53 @@
         alert("Last modified time has been successfully verified from GitHub API.");
     }
     // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
+    window.onload = getLastUpdatedTime; // Changed from displayTotalWordCount, as word count is now run separately
 </script>
 
 
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
+    <p id="totalWordCount"></p>
 <hr>
 <script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    const ADVANTAGESCount = displayWordCount("ADVANTAGES_InText")
-    const DISADVANTAGESCount = displayWordCount("DISADVANTAGES_InText")
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount + ADVANATAGESCount + DISADVANTAGESCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
+    // Function to calculate and display word count for a specified section
+    function displayWordCount(sectionId) {
+        // Get the text content from the specified section
+        const element = document.getElementById(sectionId);
+        if (!element) return 0; // Check if element exists
+        const text = element.textContent;
+        // Split text into words based on spaces and filter out any empty strings
+        // Regular expression \s+ matches one or more whitespace characters
+        const wordArray = text.trim().split(/\s+/).filter(word => word.length > 0);
+        // Count the words
+        const wordCount = wordArray.length;
+        // Return the word count for summing purposes
+        return wordCount;
+    }
+
+    // Function to calculate and display total word count from selected sections
+    function displayTotalWordCount() {
+        // 💡 Fix 5: Corrected IDs for word count
+        const AbstractCount = displayWordCount("Abstract_InText");
+        const IntroductionCount = displayWordCount("Introduction_InText");
+        const ADVANTAGES_ReduceCrime_Count = displayWordCount("ADVANTAGES_ReduceCrime_InText");
+        const ADVANTAGES_DecisionMaking_Count = displayWordCount("ADVANTAGES_DecisionMaking_InText");
+        const DISADVANTAGES_Privacy_Count = displayWordCount("DISADVANTAGES_Privacy_InText");
+        const DISADVANTAGES_Discrimination_Count = displayWordCount("DISADVANTAGES_Discrimination_InText");
+
+
+        // Calculate the sum of all selected sections
+        const totalWordCount = AbstractCount + IntroductionCount + ADVANTAGES_ReduceCrime_Count + ADVANTAGES_DecisionMaking_Count + DISADVANTAGES_Privacy_Count + DISADVANTAGES_Discrimination_Count;
+
+        // Display the total word count
+        document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+    }
+
+    // Run the function for specific sections and display total count when the page loads
+    // Note: This ensures both the GitHub time and word count run on load.
+    window.addEventListener('load', () => {
+        getLastUpdatedTime();
+        displayTotalWordCount();
+    });
+
 </script>
 
 </body>
