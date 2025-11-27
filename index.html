@@ -260,10 +260,12 @@
     <h4 id="DISADVANTAGES">DISADVANTAGES</h4>
     <h5> 1. Privacy concerns:</h5>
     <p class="ex1" id="DISADVANTAGES_Privacy_InText">
-        With the consideration of the second application of predictive policing mentioned earlier, we can understand that it poses
-        serious privacy concerns as it uses data about individuals gathered from the internet. Data stored by the police department is
-        susceptible to data leaks as data security requires training and personnel which could be quite costly. This allows for the
-        possibility of private personal data being leaked which
+        With the consideration of the second application of predictive policing mentioned earlier, we can understand that it poses serious 
+        privacy concerns as it utilizes the public data about individuals gathered from the internet to predict likelihood that an individual 
+        will commit a felony. The data that is collected and stored based on anonymised arrest data likely doesn’t pose privacy risks and concerns. 
+        However, the public mining through available information and CCTV footage does pose serious risks to privacy [3]. Additionally, all data 
+        stored by the police department is susceptible to data leaks as data security requires training and personnel which could be quite costly. 
+        This allows for the possibility of private personal data being leaked which only adds to concerns about privacy.
     </p>
     <p id="PrivacyConcernsWordCount" class="word-count-display"></p>
 
@@ -276,6 +278,21 @@
         the public with Police departments.
     </p>
     <p id="DiscriminationWordCount" class="word-count-display"></p>
+
+    /* ----------------------------------------------------------- */
+
+        <h4 id="Conclusion">Conclusion</h4>
+    <h5> 1. Privacy concerns:</h5>
+    <p class="ex1" id="Conclusion_InText">
+In conclusion predictive has the potential to be a great ally against crime but unfortunately reinforces racial and socioeconomic biases. However, 
+        if these factors are accounted for during the implementation of predictive policing, then it could prove a useful tool in crime reduction. 
+        For predictive policing to prove more beneficial than harmful it would require rigorous auditing (publicly and independently) to provide 
+        fairness and understanding regarding the process, use other data rather than just historical data as a sole use of historical data is essentially 
+        using biased data. Lastly it would be essentially it would be essentially to have some oversight from the community, allowing members of the 
+        community to be involved in the decision-making process which would build trust and accountability. All in all, predictive policing has 
+        potential to aid in the reduction of crime but still has a few flaws that need to be accounted for before full implementation.
+    </p>
+    <p id="Conclusion" class="word-count-display"></p>
 
     <p style="text-align: center;">Table 1: Data on cost and lifespan of bridge repairs</p>
     <table>
@@ -384,10 +401,11 @@
         const ADVANTAGES_DecisionMaking_Count = displayWordCount("ADVANTAGES_DecisionMaking_InText", "DecisionMakingWordCount");
         const DISADVANTAGES_Privacy_Count = displayWordCount("DISADVANTAGES_Privacy_InText", "PrivacyConcernsWordCount");
         const DISADVANTAGES_Discrimination_Count = displayWordCount("DISADVANTAGES_Discrimination_InText", "DiscriminationWordCount");
+        const Conclusion = displayWordCount("Conclusion_InText", "AbstractWordCount")
 
 
         // Calculate the sum of all selected sections
-        const totalWordCount = AbstractCount + IntroductionCount + ADVANTAGES_ReduceCrime_Count + ADVANTAGES_DecisionMaking_Count + DISADVANTAGES_Privacy_Count + DISADVANTAGES_Discrimination_Count;
+        const totalWordCount = AbstractCount + IntroductionCount + ADVANTAGES_ReduceCrime_Count + ADVANTAGES_DecisionMaking_Count + DISADVANTAGES_Privacy_Count + DISADVANTAGES_Discrimination_Count + Conclusion;
 
         // Display the total word count
         document.getElementById("totalWordCount").innerText = `Total word count for content sections: ${totalWordCount}`;
