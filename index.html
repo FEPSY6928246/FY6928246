@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 
@@ -292,7 +292,7 @@
         community to be involved in the decision-making process which would build trust and accountability. All in all, predictive policing has 
         potential to aid in the reduction of crime but still has a few flaws that need to be accounted for before full implementation.
     </p>
-    <p id="Conclusion" class="word-count-display"></p>
+    <p id="ConclusionWordCount" class="word-count-display"></p>
 
     <p style="text-align: center;">Table 1: Data on cost and lifespan of bridge repairs</p>
     <table>
@@ -417,18 +417,18 @@
 
     // Function to calculate and display total word count from selected sections
     function displayTotalWordCount() {
-        // Corrected IDs for individual word counts (Section ID, Output ID)
+        
         const AbstractCount = displayWordCount("Abstract_InText", "AbstractWordCount");
         const IntroductionCount = displayWordCount("Introduction_InText", "IntroductionWordCount");
         const ADVANTAGES_ReduceCrime_Count = displayWordCount("ADVANTAGES_ReduceCrime_InText", "ReduceCrimeWordCount");
         const ADVANTAGES_DecisionMaking_Count = displayWordCount("ADVANTAGES_DecisionMaking_InText", "DecisionMakingWordCount");
         const DISADVANTAGES_Privacy_Count = displayWordCount("DISADVANTAGES_Privacy_InText", "PrivacyConcernsWordCount");
         const DISADVANTAGES_Discrimination_Count = displayWordCount("DISADVANTAGES_Discrimination_InText", "DiscriminationWordCount");
-        const Conclusion = displayWordCount("Conclusion_InText", "AbstractWordCount")
+        const ConclusionCoun = displayWordCount("Conclusion_InText", "ConclusionWordCount")
 
 
         // Calculate the sum of all selected sections
-        const totalWordCount = AbstractCount + IntroductionCount + ADVANTAGES_ReduceCrime_Count + ADVANTAGES_DecisionMaking_Count + DISADVANTAGES_Privacy_Count + DISADVANTAGES_Discrimination_Count + Conclusion;
+        const totalWordCount = AbstractCount + IntroductionCount + ADVANTAGES_ReduceCrime_Count + ADVANTAGES_DecisionMaking_Count + DISADVANTAGES_Privacy_Count + DISADVANTAGES_Discrimination_Count + ConclusionCount;
 
         // Display the total word count
         document.getElementById("totalWordCount").innerText = `Total word count for content sections: ${totalWordCount}`;
