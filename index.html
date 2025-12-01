@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -10,7 +10,7 @@
 
 
     <style>
-        /*  1. Full Reset and Layout  */
+        /* 1. Full Reset and Layout  */
         :root {
             --primary-color: #1a5789; /* Deep Blue */
             --secondary-color: #e0e7f0; /* Light Gray-Blue for accents */
@@ -20,7 +20,7 @@
         }
 
         body {
-            background-color: #f4f6f8 !important; /*  light subtle background */
+            background-color: #f4f6f8 !important; /* light subtle background */
             max-width: 1000px; 
             margin: 0 auto;
             padding: 40px 30px; /* More padding */
@@ -85,7 +85,7 @@
             margin-bottom: 5px;
         }
 
-        /*  3. Content Blocks and Indentation  */
+        /* 3. Content Blocks and Indentation  */
         .ex1 {
             margin-left: 250px; 
             margin-right: 50px;
@@ -103,7 +103,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
         
-        /*  4. Table of Contents & Data Tables */
+        /* 4. Table of Contents & Data Tables */
         table {
             border-collapse: collapse;
             width: 350px; /* wider TOC*/
@@ -139,7 +139,7 @@
             text-decoration: underline;
         }
 
-        /*  5. Footer and Utility Elements */
+        /* 5. Footer and Utility Elements */
         hr {
             border: 0;
             height: 1px;
@@ -278,7 +278,7 @@
         allow the public to understand how decisions on policing are made. This in turn erodes the trust of the specific demographics and
         the public with Police departments.
     </p>
-     
+    <p id="DiscriminationsWordCount" class="word-count-display"></p> 
 
 
         <h4 id="Conclusion">Conclusion</h4>
@@ -292,7 +292,7 @@
         community to be involved in the decision-making process which would build trust and accountability. All in all, predictive policing has 
         potential to aid in the reduction of crime but still has a few flaws that need to be accounted for before full implementation.
     </p>
-    <p id="ConclusionWordCount" class="word-count-display"></p>
+    <p id="ConclusionCount" class="word-count-display"></p>
 
     <p style="text-align: center;">Table 1: Data on cost and lifespan of bridge repairs</p>
     <table>
@@ -372,7 +372,6 @@
             if (commits && commits.length > 0) {
                 const lastCommitDate = new Date(commits[0].commit.committer.date);
 
-                // Displaying the time on load
                 document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
             } else {
                 document.getElementById('last-updated').innerText = 'No commits found in the repository.';
@@ -382,10 +381,9 @@
             document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
         }
     }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
+    function verifyLastUpdatedTime() {
         document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
+        getLastUpdatedTime();
         alert("Last modified time has been successfully verified from GitHub API.");
     }
 </script>
@@ -394,28 +392,21 @@
     <p id="totalWordCount"></p>
 <hr>
 <script>
-    // Function to calculate and display word count for a specified section
     function displayWordCount(sectionId, outputId) {
-        // Get the text content from the specified section
         const element = document.getElementById(sectionId);
-        if (!element) return 0; // Check if element exists
+        if (!element) return 0;
         const text = element.textContent;
-        // Split text into words based on spaces and filter out any empty strings
         const wordArray = text.trim().split(/\s+/).filter(word => word.length > 0);
-        // Count the words
         const wordCount = wordArray.length;
 
-        // Display the individual word count if an outputId is provided
         const outputElement = document.getElementById(outputId);
         if (outputElement) {
             outputElement.innerText = `Word count for this section: ${wordCount}`;
         }
 
-        // Return the word count for summing purposes
         return wordCount;
     }
 
-    // Function to calculate and display total word count from selected sections
     function displayTotalWordCount() {
         
         const AbstractCount = displayWordCount("Abstract_InText", "AbstractWordCount");
@@ -423,18 +414,15 @@
         const ADVANTAGES_ReduceCrime_Count = displayWordCount("ADVANTAGES_ReduceCrime_InText", "ReduceCrimeWordCount");
         const ADVANTAGES_DecisionMaking_Count = displayWordCount("ADVANTAGES_DecisionMaking_InText", "DecisionMakingWordCount");
         const DISADVANTAGES_Privacy_Count = displayWordCount("DISADVANTAGES_Privacy_InText", "PrivacyConcernsWordCount");
-        const DISADVANTAGES_Discrimination_Count = displayWordCount("DISADVANTAGES_Discrimination_InText", "DiscriminationWordCount");
-        const ConclusionCount = displayWordCount("Conclusion_InText", "ConclusionWordCount")
+        const DISADVANTAGES_Discrimination_Count = displayWordCount("DISADVANTAGES_Discrimination_InText", "DiscriminationsWordCount");
+        const ConclusionCount = displayWordCount("Conclusion_InText", "ConclusionCount");
 
 
-        // Calculate the sum of all selected sections
         const totalWordCount = AbstractCount + IntroductionCount + ADVANTAGES_ReduceCrime_Count + ADVANTAGES_DecisionMaking_Count + DISADVANTAGES_Privacy_Count + DISADVANTAGES_Discrimination_Count + ConclusionCount;
 
-        // Display the total word count
         document.getElementById("totalWordCount").innerText = `Total word count for content sections: ${totalWordCount}`;
     }
 
-    // Run both functions when the page finishes loading
     window.addEventListener('load', () => {
         getLastUpdatedTime();
         displayTotalWordCount();
